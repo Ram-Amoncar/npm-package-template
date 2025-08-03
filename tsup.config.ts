@@ -1,5 +1,5 @@
+import type { Format, NormalizedOptions } from 'tsup'
 import { defineConfig } from 'tsup'
-import type { NormalizedOptions, Format } from 'tsup'
 
 interface Context {
     options: NormalizedOptions
