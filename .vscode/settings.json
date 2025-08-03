@@ -5,18 +5,12 @@
       "fileMatch": ["package.json", "tsup.config.json"]
     },
     {
-      "url": "https://json.schemastore.org/prettierrc-2.8.8",
-      "fileMatch": [".prettierrc"]
+      "url": "https://biomejs.dev/schemas/2.0.5/schema.json",
+      "fileMatch": ["biome.json"]
     },
     {
       "url": "https://json.schemastore.org/package",
       "fileMatch": ["package.json"]
-    },
-    {
-      "url": "https://json.schemastore.org/eslintrc.json",
-      "fileMatch": [".eslintrc.json"]
     }
-  ],
-  "prettier.configPath": ".prettierrc",
-  "prettier.ignorePath": ".prettierignore"
+  ]
 }

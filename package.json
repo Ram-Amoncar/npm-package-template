@@ -1,64 +1,50 @@
 {
-  "name": "npm-package-template",
-  "description": "A template for NPM package in Typescript",
-  "version": "6.0.0",
-  "author": "Ram Amoncar",
-  "license": "UNLICENSED",
-  "keywords": [
-    "npm",
-    "bun",
-    "typescript",
-    "template",
-    "typescript project",
-    "npm package template"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Ram-Amoncar/npm-package-template.git"
-  },
-  "type": "module",
-  "types": "./dist/index.d.ts",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "browser": "./dist/index.min.js",
-  "files": [
-    "dist"
-  ],
-  "exports": {
-    ".": {
-      "import": {
-        "types": "./dist/index.d.mts",
-        "default": "./dist/index.mjs"
-      },
-      "require": {
-        "types": "./dist/types/index.d.ts",
-        "default": "./dist/index.js"
-      }
-    }
-  },
-  "scripts": {
-    "prepare": "husky",
-    "build": "tsup",
-    "test": "jest --config ./jest.config.ts",
-    "test:watch": "jest --watch --config ./jest.config.ts",
-    "coverage": "jest --coverage --config ./jest.config.ts",
-    "format": "prettier -w . --config .prettierrc",
-    "format:check": "prettier -c . --config .prettierrc",
-    "lint": "eslint . --no-warn-ignored",
-    "lint:fix": "eslint --fix ."
-  },
-  "devDependencies": {
-    "@stylistic/eslint-plugin": "^4.2.0",
-    "@types/jest": "^29.5.14",
-    "eslint-config-love": "^119.0.0",
-    "eslint-config-prettier": "^10.0.2",
-    "eslint-plugin-jest": "^28.11.0",
-    "eslint-plugin-prettier": "^5.2.6",
-    "husky": "^9.1.7",
-    "jest": "^29.7.0",
-    "ts-jest": "^29.3.1",
-    "ts-node": "^10.9.2",
-    "tsup": "^8.4.0",
-    "typescript": "^5.8.3"
-  }
+	"name": "npm-package-template",
+	"description": "A template for NPM package in Typescript",
+	"version": "6.0.0",
+	"author": "Ram Amoncar",
+	"license": "UNLICENSED",
+	"keywords": ["npm", "bun", "typescript", "template", "typescript project", "npm package template"],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Ram-Amoncar/npm-package-template.git"
+	},
+	"type": "module",
+	"types": "./dist/index.d.ts",
+	"main": "./dist/index.js",
+	"module": "./dist/index.mjs",
+	"browser": "./dist/index.min.js",
+	"files": ["dist"],
+	"exports": {
+		".": {
+			"import": {
+				"types": "./dist/index.d.mts",
+				"default": "./dist/index.mjs"
+			},
+			"require": {
+				"types": "./dist/types/index.d.ts",
+				"default": "./dist/index.js"
+			}
+		}
+	},
+	"scripts": {
+		"prepare": "husky",
+		"build": "tsup",
+		"test": "jest --config ./jest.config.ts",
+		"test:watch": "jest --watch --config ./jest.config.ts",
+		"coverage": "jest --coverage --config ./jest.config.ts",
+		"format": "biome check --fix --formatter-enabled=true --assist-enabled=true  --linter-enabled=false --config-path=biome.json  .",
+		"format:check": "biome check --formatter-enabled=true --linter-enabled=false --assist-enabled=false --config-path=biome.json",
+		"lint": "biome check --config-path=biome.json .",
+		"lint:fix": "biome lint --config-path=biome.json --write ."
+	},
+	"devDependencies": {
+		"@types/jest": "^29.5.14",
+		"husky": "^9.1.7",
+		"jest": "^29.7.0",
+		"ts-jest": "^29.3.1",
+		"ts-node": "^10.9.2",
+		"tsup": "^8.4.0",
+		"typescript": "^5.8.3"
+	}
 }

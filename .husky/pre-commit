@@ -4,7 +4,7 @@
 bun run test
 
 # Formatting
-bunx prettier $(git diff --cached --name-only --diff-filter=AMCR | sed 's| |\\ |g') --write --ignore-unknown --config .prettierrc
+biome check --fix --files-ignore-unknown=true --formatter-enabled=true --assist-enabled=true  --linter-enabled=false --config-path=biome.json $(git diff --cached --name-only --diff-filter=AMCR | sed 's| |\\ |g')
 git update-index --again
 
 # Linting
