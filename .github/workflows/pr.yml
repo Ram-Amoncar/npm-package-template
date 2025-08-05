@@ -42,5 +42,8 @@ jobs:
             - name: Installing dependencies ⚒️
               run: npm install
 
+            - name: Setup Biome
+              uses: biomejs/setup-biome@v2
+              
             - name: Checking code quality 🤔
               run: npm run lint
