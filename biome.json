@@ -52,7 +52,13 @@
 	"linter": {
 		"enabled": true,
 		"rules": {
-			"recommended": true
+			"recommended": true,
+			"complexity": {
+				"noUselessStringConcat": "error",
+				"useSimplifiedLogicExpression": "error",
+				"useWhile": "error",
+				"noExcessiveCognitiveComplexity": "error"
+			}
 		}
 	},
 	"overrides": [
